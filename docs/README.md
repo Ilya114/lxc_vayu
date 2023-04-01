@@ -8,8 +8,8 @@ We can`t use LXC newer than 3.1.0, 3.1.0 currently available in Termux repo.
 - [x] Create and booting containers
 - [x] Internet
 - [x] Hardware acceleration
+- [x] termux-x11
 - [ ] snapd
-- [ ] Termux-x11
 
 Notes: We can create users but need to fix sudo and set HOME everytime. lxc-attach working correctly only with --clear-env otherwise you won't be able to run any programs.
 
