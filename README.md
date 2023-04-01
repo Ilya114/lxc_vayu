@@ -14,7 +14,7 @@ We can`t use LXC newer than 3.1.0, 3.1.0 currently available in Termux repo.
 Notes: We can create users but need to fix sudo and set HOME everytime. lxc-attach working correctly only with --clear-env otherwise you won't be able to run any programs.
 
 ### Installation instructions
-- [English](docs/Installation(en).md)
+- [English](docs/Installation.md)
 
 ### Credits
-- [ppoffice](https://gist.github.com/ppoffice) for a list of required cgroup subsystems to be mounted, for a way to create containers without checking rootfs, for the way to use Termux programs in adb shell in the his [guide](https://gist.github.com/ppoffice/154acbc7fa6f8b73b7b3b57af3ca6951)
+- [ppoffice](https://gist.github.com/ppoffice) for a list of required cgroup subsystems to be mounted, for a way to create containers without checking rootfs, for the way to use Termux programs in adb shell, for the need kernel configs in the his [guide](https://gist.github.com/ppoffice/154acbc7fa6f8b73b7b3b57af3ca6951)
