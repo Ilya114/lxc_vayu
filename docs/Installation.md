@@ -10,7 +10,7 @@
 Open Termux, update packages and install `x11-repo`: `pkg update && pkg install x11-repo`, then install xwayland, tsu and lxc: `pkg install tsu lxc xwayland`. Go to unpacked `termux-x11` folder and install termux-x11: `dpkg -i <termux-x11>.deb`
 
 ### Mount cgroup
-Download [this](files/mountcgroups.sh) script, run `tsu` (give root rights to Termux app), then run `sh mountcgroups.sh`
+Download [this](/files/mountcgroups.sh) script, run `tsu` (give root rights to Termux app), then run `sh mountcgroups.sh`
 
 ### Create container
 Create LXC container (I using Ubuntu 22.04): `lxc-create ubuntu -t download -- --no-validate`
@@ -30,7 +30,7 @@ lxc.net.0.hwaddr = 00:16:3e:b8:16:74
 Now, we can run container: `lxc-start ubuntu -F` and you should show booting systemd. Then he asks login and password open second Termux session and attach your container: `lxc-attach ubuntu --clear-env`, then run `/usr/bin/passwd` and type new password. Back to first session and type login `root` and your password which your set.
 
 ### Fix internet
-Make sure what internet working: `ping 8.8.8.8`, you should show pings, but if you try `apt update` repo wont update. Run `vi /etc/resolv.conf` and write `nameserver 8.8.8.8` instead of exist, then quit with write and save file. Go to '/etc/systemd/resolved.conf' and type `DNS 8.8.8.8`, then quit with write and save file, then run `systemctl restart systemd-resolved`. Now, internet should fully works.
+Make sure what internet working: `ping 8.8.8.8`, you should show pings, but if you try `apt update` repo wont update. Run `vi /etc/resolv.conf` and write `nameserver 8.8.8.8` instead of exist, then quit with write and save file. Go to `/etc/systemd/resolved.conf` and type `DNS 8.8.8.8`, then quit with write and save file, then run `systemctl restart systemd-resolved`. Now, internet should fully works.
 
 ### DE and hardware acceleration.
 Open second session and run termux-x11: `Xvfb :0 -ac & && DISPLAY=:0 termux-x11 &`. Then go to first session, install any graphical program, run `export DISPLAY=:0` and start graphical program, in termux-x11 app you should see open program. You can compile Turnip+Zink and get hardware acceleration using [this](https://github.com/Ilya114/box86-64-termux/blob/main/docs/INSTALLATION.md#compile-adreno-turnip-and-zink-driver) guide
