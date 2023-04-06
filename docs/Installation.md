@@ -36,4 +36,7 @@ Make sure what internet working: `ping 8.8.8.8`, you should show pings, but if y
 Open second session and run termux-x11: `Xvfb :0 -ac & && DISPLAY=:0 termux-x11 &`. Then go to first session, install any graphical program, run `export DISPLAY=:0` and start graphical program, in termux-x11 app you should see open program. You can compile Turnip+Zink and get hardware acceleration using [this](https://github.com/Ilya114/box86-64-termux/blob/main/docs/INSTALLATION.md#compile-adreno-turnip-and-zink-driver) guide
 
 ### Notes
-Termux-x11 may have problems with X server socket, if you have problems open issue and let me know.
+- Termux-x11 may have problems with X server socket, if you have problems open issue and let me know.
+- If you have `sudo` error write this to container `/etc/fstab`: `/ / f2fs rw,lazytime,seclabel,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,flush_merge,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,fsync_mode=nobarrier`. I am working on a better solution but no success so far
+- If you try mount /sdcard read-write working only in root user, im trying fix
+- $HOME and locales dumped in root
