@@ -37,7 +37,7 @@ Open second session and run termux-x11: `Xvfb :0 -ac & && DISPLAY=:0 termux-x11 
 
 ### Notes
 - Termux-x11 may have problems with X server socket, if you have problems open issue and let me know.
-- If you have `sudo` error write this to container `/etc/fstab`: `/ / f2fs rw,lazytime,seclabel,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,flush_merge,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,fsync_mode=nobarrier`. I am working on a better solution but no success so far
-- If you try mount /sdcard read-write working only in root user, im trying fix
+- If you have `sudo` error write this to container `/etc/fstab`: `/ / f2fs rw,lazytime,seclabel,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,flush_merge,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1065,inlinecrypt,alloc_mode=default,fsync_mode=nobarrier`.
+- If you try mount /sdcard read-write working only in root user
 - $HOME and locales dumped in root
 - Sound work ([instruction](https://github.com/termux/proot-distro/issues/85#issuecomment-854358933))
