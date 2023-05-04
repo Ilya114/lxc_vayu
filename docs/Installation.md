@@ -7,7 +7,7 @@
 - [Termux-x11](https://github.com/termux/termux-x11/actions/workflows/debug_build.yml)
 
 ### Install LXC and termux-x11
-Open Termux, update packages and install `x11-repo`: `pkg update && pkg install x11-repo`, then install xwayland, tsu and lxc: `pkg install tsu lxc xwayland`. Go to unpacked `termux-x11` folder and install termux-x11: `dpkg -i <termux-x11>.deb`
+Open Termux, update packages and install `x11-repo and root-repo`: `pkg update && pkg install x11-repo root-repo`, then install xwayland, tsu and lxc: `pkg install tsu lxc xwayland`. Go to unpacked `termux-x11` folder and install termux-x11: `dpkg -i <termux-x11>.deb`
 
 ### Mount cgroup
 Download [this](/files/mountcgroups.sh) script, run `tsu` (give root rights to Termux app), then run `sh mountcgroups.sh`
