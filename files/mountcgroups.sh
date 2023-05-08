@@ -1,3 +1,6 @@
+# Fix suid
+mount -o remount,dev,suid /data
+
 # Mount cgroup_root
 mount -t tmpfs cgroup_root /sys/fs/cgroup
 
